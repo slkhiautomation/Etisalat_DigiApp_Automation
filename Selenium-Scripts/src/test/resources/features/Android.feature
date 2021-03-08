@@ -5,12 +5,11 @@ Feature: Open Help and Support and Search for any FAQ
     When user click on "login" button on "StartingPage"
     And user enter text "username" in "usernameField" on "LoginPage"
     And user enter text "password" in "passwordField" on "LoginPage"
-    And user dismiss keyboard
     When user click on "login" button on "LoginPage"
 
   @FaqTest
   Scenario: Search in help and support and verify FAQ results are fetched
-    When user click on "notNow" button on "Homepage"
+    When user click on "notNow" button on "HomePage"
     And user click on "topRightMenu" button on "HomePage"
     And user scroll till text "Help & Support"
     And user click on "helpAndSupport" button on "Menu"

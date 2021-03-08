@@ -3,16 +3,10 @@ package Test.Automation.Stepdefinitions;
 import Test.Automation.Pages.CommonPage;
 import Test.Automation.Utils.DriverFactory;
 import Test.Automation.Utils.PropertyReader;
-import Test.Automation.Utils.UtilityMethods;
-import com.cucumber.listener.Reporter;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.By;
-
-import java.io.IOException;
 
 import static Test.Automation.Utils.ExcelFileManager.readFromCell;
 
