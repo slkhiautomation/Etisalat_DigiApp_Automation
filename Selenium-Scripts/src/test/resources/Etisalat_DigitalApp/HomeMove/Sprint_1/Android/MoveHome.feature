@@ -28,5 +28,6 @@ Feature: Login into Home Move Application and Submit a Home Move Request
     And user click on "movingDate" button on "HomeMovePage"
     And user click on "continue" button on "HomeMovePage"
     And user click on "acceptAndContinue" button on "HomeMovePage"
+#    And user click on "submitButton" button on "HomeMovePage"
 
 
