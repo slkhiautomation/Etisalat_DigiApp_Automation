@@ -19,7 +19,7 @@ import java.sql.SQLException;
 
 public class StartingSteps extends DriverFactory {
 
-    public StartingSteps() throws SQLException {
+    public StartingSteps() throws Exception {
     }
 
     @Given("^Navigate to Application$")

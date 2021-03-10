@@ -11,7 +11,7 @@ public class APIStepDefs extends DriverFactory {
 
     public static String abc;
 
-    public APIStepDefs() throws SQLException {
+    public APIStepDefs() throws Exception {
     }
 
     @Given("^I should see response code \"([^\"]*)\" for the requested API \"([^\"]*)\"$")

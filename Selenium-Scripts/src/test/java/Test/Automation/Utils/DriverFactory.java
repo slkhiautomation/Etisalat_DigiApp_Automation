@@ -1,5 +1,6 @@
 package Test.Automation.Utils;
 
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,13 +30,13 @@ public class DriverFactory {
 	public static String JDBC_URL = "jdbc:oracle:thin:@//"+Connection_url;
 
 
-	public DriverFactory() throws SQLException {
+	public DriverFactory() throws Exception {
 		initialize();
 //		initializeSQL();
 //		initializeLogging();
 	}
 
-	public void initialize()  {
+	public void initialize()  throws Exception{
 		if (driver == null)
 			if(new PropertyReader().readProperty("runAt").equals("local"))
 			{
@@ -168,7 +169,7 @@ public class DriverFactory {
 		driver = null;
 	}
 
-	private void createAndroidDriverInstance() {
+	private void createAndroidDriverInstance() throws Exception {
 
 		// Created object of DesiredCapabilities class.
 		cap = new DesiredCapabilities();
@@ -180,6 +181,7 @@ public class DriverFactory {
 		//cap.setCapability("unicodeKeyboard", true);
 		//cap.setCapability("resetKeyboard", true);
 		cap.setCapability("autoGrantPermissions", true);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 	}
 
 

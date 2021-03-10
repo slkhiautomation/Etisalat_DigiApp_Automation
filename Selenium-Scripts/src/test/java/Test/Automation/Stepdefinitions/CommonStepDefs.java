@@ -3,6 +3,7 @@ package Test.Automation.Stepdefinitions;
 import Test.Automation.Pages.CommonPage;
 import Test.Automation.Utils.DriverFactory;
 import Test.Automation.Utils.PropertyReader;
+import Test.Automation.Utils.UtilityMethods;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -41,7 +42,7 @@ public class CommonStepDefs extends DriverFactory {
         commonPage.Clickelemet(sheetName,keyName);
 //        Reporter.addStepLog("Click on "+keyName);
 //        Reporter.addStepLog("Action Performed on "+sheetName);
-        //UtilityMethods.TakeSnapShot();
+        UtilityMethods.TakeSnapShot();
     }
 
     @When("^user select \"([^\"]*)\" from \"([^\"]*)\" on \"([^\"]*)\"$")
