@@ -16,7 +16,7 @@ Feature: Help and Support Feature File
     And user enter text "search" in "searchField" on "HelpAndSupportPage"
     When user click on "faq" button on "HelpAndSupportPage"
     Then Assert that "faqText" appear on "HelpAndSupportPage"
-    When user click on "yesButton" button on "HelpAndSupportPage"z
+    When user click on "yesButton" button on "HelpAndSupportPage"
     Then Assert that "ThanksText" appear on "HelpAndSupportPage"
     When user click on "faq" button on "HelpAndSupportPage"
     Then Assert that "faqText" appear on "HelpAndSupportPage"
