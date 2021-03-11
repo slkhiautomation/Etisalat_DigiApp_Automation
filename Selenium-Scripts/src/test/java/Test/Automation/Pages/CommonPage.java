@@ -42,33 +42,31 @@ public class CommonPage extends DriverFactory {
     }
 
     public void enterText(String Sheet, String rowMatch, String text) throws IOException, InterruptedException {
-    //    UtilityMethods.waitForPageLoadAndPageReady();
-    //    UtilityMethods.waitForPageLoad();
+//       UtilityMethods.waitForPageLoadAndPageReady();
+//        UtilityMethods.waitForPageLoad();
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),500);
         UtilityMethods.waitForVisibility(element);
-     //   UtilityMethods.wait3Seconds();
         element.clear();
         element.sendKeys(text);
         System.out.println("Text enetered in element "+rowMatch+" "+ text);
     }
 
     public void Clickelemet(String Sheet, String rowMatch) throws IOException, InterruptedException {
-    //    UtilityMethods.waitForPageLoadAndPageReady();
-    //    UtilityMethods.waitForPageLoad();
-        //UtilityMethods.wait2Seconds();
+//        UtilityMethods.waitForPageLoadAndPageReady();
+//        UtilityMethods.waitForPageLoad();
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),500);
         System.out.println("Element found "+element.getText());
-    //    UtilityMethods.waitForVisibility(element);
-    //    UtilityMethods.scrollToWebElement(element);
+//        UtilityMethods.waitForVisibility(element);
+//        UtilityMethods.scrollToWebElement(element);
         try{
-            //UtilityMethods.waitForPageLoadAndPageReady();
-            //UtilityMethods.waitForPageLoad();
+//            UtilityMethods.waitForPageLoadAndPageReady();
+//            UtilityMethods.waitForPageLoad();
             element.click();
             System.out.println("Clicked on Element "+rowMatch);
 
         }catch (Exception ex){
-            //UtilityMethods.waitForPageLoadAndPageReady();
-            //UtilityMethods.waitForPageLoad();
+//            UtilityMethods.waitForPageLoadAndPageReady();
+//            UtilityMethods.waitForPageLoad();
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().perform();
             System.out.println("Clicked on Element by Action "+rowMatch);
@@ -84,10 +82,9 @@ public class CommonPage extends DriverFactory {
     }
 
     public void assertonPage(String Sheet, String rowMatch) throws IOException, InterruptedException {
-        //UtilityMethods.waitForPageLoadAndPageReady();
-        //UtilityMethods.wait3Seconds();
+//        UtilityMethods.waitForPageLoadAndPageReady();
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),110);
-        //UtilityMethods.waitForVisibility(element);
+//        UtilityMethods.waitForVisibility(element);
         System.out.println("Element found and Value is "+element.getText());
         String result = readFromCell(fileName,Sheet,1,rowMatch);
         Pattern.compile(Pattern.quote(element.getText()), Pattern.CASE_INSENSITIVE).matcher(result).find();
@@ -112,12 +109,12 @@ public class CommonPage extends DriverFactory {
         System.out.println("Element found and Value is "+element.getText());
 //        String result = readFromCell(fileName,Sheet,1,rowMatch);
 //        Pattern.compile(Pattern.quote(element.getText()), Pattern.CASE_INSENSITIVE).matcher(result).find();
-        //Object expected = Pattern.compile(Pattern.quote(result), Pattern.CASE_INSENSITIVE).matcher(result).find();
+//        Object expected = Pattern.compile(Pattern.quote(result), Pattern.CASE_INSENSITIVE).matcher(result).find();
         String actualResult = element.getText();
-        //actual = Pattern.compile(Pattern.quote(element.getText()), Pattern.CASE_INSENSITIVE).matcher(element.getText()).find();
+//        actual = Pattern.compile(Pattern.quote(element.getText()), Pattern.CASE_INSENSITIVE).matcher(element.getText()).find();
         String expectedResult = text;
         System.out.println("Expected Message is "+expectedResult);
-        //String actualResult = actual.toString();
+//        String actualResult = actual.toString();
         if(actualResult.contains(expectedResult)){
             Assert.assertTrue(true);
             System.out.println("Searched in List");
@@ -129,12 +126,11 @@ public class CommonPage extends DriverFactory {
     }
 
     public void Scrollelemet(String Sheet, String rowMatch) throws IOException, InterruptedException {
-        //UtilityMethods.waitForPageLoadAndPageReady();
-        //UtilityMethods.waitForPageLoad();
-        //UtilityMethods.wait2Seconds();
+//        UtilityMethods.waitForPageLoadAndPageReady();
+//        UtilityMethods.waitForPageLoad();
         WebElement element = UtilityMethods.getElementByXpathWithoutWait(readFromCell(ConfigfileName,Sheet,1,rowMatch));
         System.out.println("Element found "+element.getText());
-        //UtilityMethods.waitForVisibility(element);
+//        UtilityMethods.waitForVisibility(element);
         UtilityMethods.scrollToAndroidElement(element);
     }
 
@@ -152,11 +148,6 @@ public class CommonPage extends DriverFactory {
         }
     }
 
-//    public void waitForLoading() throws IOException {
-////
-////        WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,"LoginPage",1,"loader"),10);
-////    }
-
     public void scrollTillText(String Text){
 
         try {
@@ -171,9 +162,6 @@ public class CommonPage extends DriverFactory {
                 .release()
                 .perform();
         System.out.println("Scrolled");
-//        ((AndroidDriver)driver).scrollTo(Text);
-
-
     }
 
 }

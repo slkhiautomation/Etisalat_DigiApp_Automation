@@ -38,18 +38,13 @@ public class DriverFactory {
 
 	public void initialize()  throws Exception{
 		if (driver == null)
-			if(new PropertyReader().readProperty("runAt").equals("local"))
-			{
+			if(new PropertyReader().readProperty("runAt").equals("local")){
 				createNewLocalDriverInstance();
-				
 			}
-			else if(new PropertyReader().readProperty("runAt").equals("remote"))
-			{
+			else if(new PropertyReader().readProperty("runAt").equals("remote")){
 				createNewRemoteDriverInstance();
-				
 			}
-			else if(new PropertyReader().readProperty("runAt").equals("android"))
-			{
+			else if(new PropertyReader().readProperty("runAt").equals("android")){
 				createAndroidDriverInstance();
 			}
 	}
@@ -61,39 +56,11 @@ public class DriverFactory {
 		} else {
 			System.out.println("Failed to make connection!");
 		}
-//		try (conn = DriverManager.getConnection(
-//				"jdbc:oracle:thin:@"+Connection_url, DBName, DBName)) {
-//
-//			if (conn != null) {
-//				System.out.println("Connected to the database!");
-//			} else {
-//				System.out.println("Failed to make connection!");
-//			}
-//
-//		} catch (SQLException e) {
-//			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-//		}
-//		try{
-////			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			System.out.println(JDBC_URL);
-////			conn = DriverManager.getConnection(JDBC_URL);
-//			conn = DriverManager.getConnection(JDBC_URL,DBName,DBName);
-//			System.out.println("Successfully Connect");
-//		}
-//		catch(Exception e){
-//			System.out.println(e);
-//		}
 	}
 
 	private void createNewLocalDriverInstance()   {
 		String browser = new PropertyReader().readProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
- 
-			//System.setProperty("webdriver.chrome.driver", "C:\\chrome_driver\\chromedriver.exe");
-			
-			
-			
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("useAutomationExtension", false);
 			options.addArguments("--incognito");
@@ -170,18 +137,13 @@ public class DriverFactory {
 	}
 
 	private void createAndroidDriverInstance() throws Exception {
-
-		// Created object of DesiredCapabilities class.
 		cap = new DesiredCapabilities();
-
-		cap.setCapability("deviceName","VIVO S1");
-		cap.setCapability("platformName", "android");
-		cap.setCapability("appPackage", "com.Etisalat.ETIDA");
-		cap.setCapability("appActivity", "com.etisalat.etida.home.activities.SplashActivity");
-		//cap.setCapability("unicodeKeyboard", true);
-		//cap.setCapability("resetKeyboard", true);
+		cap.setCapability("deviceName",new PropertyReader().readProperty("deviceName"));
+		cap.setCapability("platformName", new PropertyReader().readProperty("platformName"));
+		cap.setCapability("appPackage", new PropertyReader().readProperty("appPackage"));
+		cap.setCapability("appActivity", new PropertyReader().readProperty("appActivity"));
 		cap.setCapability("autoGrantPermissions", true);
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
 	}
 
 
