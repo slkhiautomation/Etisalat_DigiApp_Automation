@@ -16,7 +16,7 @@ import static Test.Automation.Utils.ExcelFileManager.readFromCell;
 public class CommonStepDefs extends DriverFactory {
 
     private CommonPage commonPage;
-    public static String DatafileName =(new PropertyReader().readProperty("appConfigFile"));
+    public static String DatafileName =(new PropertyReader().readProperty("excelFileName"));
     public static int count = 1;
     public static int EN_count = 1;
     public static int AR_count = 1;

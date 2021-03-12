@@ -4,7 +4,6 @@ import Test.Automation.Utils.DriverFactory;
 import Test.Automation.Utils.PropertyReader;
 import Test.Automation.Utils.UtilityMethods;
 import com.cucumber.listener.Reporter;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Assert;
@@ -26,7 +25,7 @@ public class CommonPage extends DriverFactory {
     @FindBy(how= How.XPATH,using=".//*[@id='locations']")
     public static WebElement Location;
 
-    public static String fileName =(new PropertyReader().readProperty("appConfigFile"));
+    public static String fileName =(new PropertyReader().readProperty("excelFileName"));
     public static String ConfigfileName;
 
     static {
