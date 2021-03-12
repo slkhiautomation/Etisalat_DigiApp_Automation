@@ -10,7 +10,7 @@ Feature: Login into Home Move Application and Submit a Home Move Request
     When user click on "login" button on "LoginPage"
 
   @HomeMove1
-  Scenario:
+  Scenario: Verify the Home Move
     When user click on "notNow" button on "HomePage"
     And user click on "userPlan" button on "HomePage"
     And user click on "manageTab" button on "detailsPage"

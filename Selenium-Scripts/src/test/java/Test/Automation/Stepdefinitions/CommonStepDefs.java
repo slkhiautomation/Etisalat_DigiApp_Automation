@@ -42,6 +42,20 @@ public class CommonStepDefs extends DriverFactory {
         UtilityMethods.TakeSnapShot();
     }
 
+    @When("^user click on \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void user_click_on(String keyName, String sheetName) throws Throwable {
+        commonPage.Clickelemet(sheetName,keyName);
+        Reporter.addStepLog("Click on "+keyName);
+        UtilityMethods.TakeSnapShot();
+    }
+
+    @When("^user select on \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void user_select_on(String keyName, String sheetName) throws Throwable {
+        commonPage.Clickelemet(sheetName,keyName);
+        Reporter.addStepLog("Click on "+keyName);
+        UtilityMethods.TakeSnapShot();
+    }
+
     @When("^user select \"([^\"]*)\" from \"([^\"]*)\" on \"([^\"]*)\"$")
     public void user_select_from_on(String textKey, String keyName, String sheetName) throws Throwable {
         String text = readFromCell(DatafileName,sheetName,1,textKey);
