@@ -25,7 +25,7 @@ public class Hooks extends DriverFactory {
 
 
 
-    public Hooks() throws IOException, InterruptedException, SQLException, ClassNotFoundException {
+    public Hooks() throws Exception {
 
     }
 

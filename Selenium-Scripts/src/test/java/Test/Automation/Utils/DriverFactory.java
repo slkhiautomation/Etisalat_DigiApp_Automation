@@ -1,5 +1,7 @@
 package Test.Automation.Utils;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,85 +29,57 @@ public class DriverFactory {
 	public static String DBName = (new PropertyReader().readProperty("DB_Name"));
 	protected static DesiredCapabilities cap;
 	public static String JDBC_URL = "jdbc:oracle:thin:@//"+Connection_url;
+	public static URL url;
 
 
-	public DriverFactory() throws SQLException {
+	public DriverFactory() throws Exception {
 		initialize();
 //		initializeSQL();
 //		initializeLogging();
 	}
 
-	public void initialize()  {
+	public void initialize()  throws Exception{
 		if (driver == null)
-			if(new PropertyReader().readProperty("runAt").equals("local"))
-			{
+			if(new PropertyReader().readProperty("runAt").equals("local")){
 				createNewLocalDriverInstance();
-				
-			}
-			else if(new PropertyReader().readProperty("runAt").equals("remote"))
-			{
+			}else if(new PropertyReader().readProperty("runAt").equals("remote")){
 				createNewRemoteDriverInstance();
-				
 			}
-			else if(new PropertyReader().readProperty("runAt").equals("android"))
-			{
+		/*else if(new PropertyReader().readProperty("runAt").equals("android")){
 				createAndroidDriverInstance();
+			}*/
+		else if (new PropertyReader().readProperty("runAt").equals("IOS")){
+				System.out.println("I am executing for IOS");
+				createiosDriverInstance(new PropertyReader().readProperty("DEVICE_NAME"));
 			}
+
 	}
 
 	public void initializeSQL() throws SQLException {
-	conn = DriverManager.getConnection("jdbc:oracle:thin:@"+Connection_url, DBName, DBName);
+		conn = DriverManager.getConnection("jdbc:oracle:thin:@"+Connection_url, DBName, DBName);
 		if (conn != null) {
 			System.out.println("Connected to the database!");
 		} else {
 			System.out.println("Failed to make connection!");
 		}
-//		try (conn = DriverManager.getConnection(
-//				"jdbc:oracle:thin:@"+Connection_url, DBName, DBName)) {
-//
-//			if (conn != null) {
-//				System.out.println("Connected to the database!");
-//			} else {
-//				System.out.println("Failed to make connection!");
-//			}
-//
-//		} catch (SQLException e) {
-//			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-//		}
-//		try{
-////			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			System.out.println(JDBC_URL);
-////			conn = DriverManager.getConnection(JDBC_URL);
-//			conn = DriverManager.getConnection(JDBC_URL,DBName,DBName);
-//			System.out.println("Successfully Connect");
-//		}
-//		catch(Exception e){
-//			System.out.println(e);
-//		}
 	}
 
 	private void createNewLocalDriverInstance()   {
 		String browser = new PropertyReader().readProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
- 
-			//System.setProperty("webdriver.chrome.driver", "C:\\chrome_driver\\chromedriver.exe");
-			
-			
-			
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("useAutomationExtension", false);
 			options.addArguments("--incognito");
 
 			String browserExePath = new PropertyReader().readProperty("browserExePath");
 			String driverExePath = new PropertyReader().readProperty("driverExePath");
-			
-			options.setBinary(browserExePath); 
-			System.setProperty("webdriver.chrome.driver", driverExePath); 
+
+			options.setBinary(browserExePath);
+			System.setProperty("webdriver.chrome.driver", driverExePath);
 			driver = new ChromeDriver(options);
 		}  else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver","geckodriver.exe");
-            driver =  new FirefoxDriver();
+			driver =  new FirefoxDriver();
             /*DesiredCapabilities dc = DesiredCapabilities.firefox();
             dc.setCapability("marionette", true);
             driver =  new FirefoxDriver(dc);*/
@@ -145,8 +119,8 @@ public class DriverFactory {
             capabilities.setCapability("requireWindowFocus", true);
             driver = new InternetExplorerDriver();
         } */else {
-        	throw new IllegalArgumentException("The Browser Type is Undefined");
-        }
+			throw new IllegalArgumentException("The Browser Type is Undefined");
+		}
 	}
 
 	public String getReportConfigPath(){
@@ -168,19 +142,38 @@ public class DriverFactory {
 		driver = null;
 	}
 
-	private void createAndroidDriverInstance() {
-
-		// Created object of DesiredCapabilities class.
+	private void createAndroidDriverInstance() throws Exception {
 		cap = new DesiredCapabilities();
-
-		cap.setCapability("deviceName","VIVO S1");
-		cap.setCapability("platformName", "android");
-		cap.setCapability("appPackage", "com.Etisalat.ETIDA");
-		cap.setCapability("appActivity", "com.etisalat.etida.home.activities.SplashActivity");
-		//cap.setCapability("unicodeKeyboard", true);
-		//cap.setCapability("resetKeyboard", true);
+		cap.setCapability("deviceName",new PropertyReader().readProperty("deviceName"));
+		cap.setCapability("platformName", new PropertyReader().readProperty("platformName"));
+		cap.setCapability("appPackage", new PropertyReader().readProperty("appPackage"));
+		cap.setCapability("appActivity", new PropertyReader().readProperty("appActivity"));
 		cap.setCapability("autoGrantPermissions", true);
+		driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
 	}
 
+	public void createiosDriverInstance(String deviceName) {
+		try {
+			url = new URL(new PropertyReader().readProperty("AndroidappURL"));
 
-}
+			cap = new DesiredCapabilities();
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, new PropertyReader().readProperty("PLATFORM_NAME"));
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, new PropertyReader().readProperty("XCUITest"));
+			cap.setCapability("useNewWDA", false);
+			cap.setCapability("updatedWDABundleId", new PropertyReader().readProperty("BandleID"));
+			cap.setCapability("xcodeOrgId", new PropertyReader().readProperty("xcodeOrgId"));
+			cap.setCapability("xcodeSigningId", new PropertyReader().readProperty("xcodeSigningId"));
+			cap.setCapability("noReset", true);
+			if (deviceName.equalsIgnoreCase(new PropertyReader().readProperty("DEVICE_NAME"))) {
+				cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, new PropertyReader().readProperty("PLATFORM_VERSION"));
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, new PropertyReader().readProperty("DEVICE_NAME"));
+				cap.setCapability(MobileCapabilityType.UDID, new PropertyReader().readProperty("UDID"));
+			}
+			cap.setCapability(MobileCapabilityType.APP, (new PropertyReader().readProperty("appPAth")));
+			cap.setCapability("autoLaunch", true);
+			cap.setCapability(MobileCapabilityType.NO_RESET, true);
+		} catch (Exception e) {
+			System.out.println("unable to load the application::" + e);
+		}
+
+	}}

@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3b31e0e-ca22-4731-8b78-29ea75ae7292" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="f3b31e0e-ca22-4731-8b78-29ea75ae7292" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Selenium-Scripts.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomeMoveTestData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/appConfigFileHomeMove.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Pages/CommonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Pages/CommonPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/RunAll_Sanity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/RunAll_Sanity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/RunOnly_HelpAndSupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/APIStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/APIStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/CommonStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/CommonStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/StartingSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Stepdefinitions/StartingSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/ExcelFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/ExcelFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/UtilityMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Automation/Utils/UtilityMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/HelpAndSupport/Sprint_1/Android/HelpAndSupport.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/IOS/HelpAndSupport.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/HomeMove/Sprint_1/Android/MoveHome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/IOS/MoveHome.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/API.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Samples/API.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Android.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Samples/Android.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Common_POC.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Samples/Common_POC.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/HelpAndSupport.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Samples/HelpAndSupport.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Samples/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/~$HomeMoveTestData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/~$appConfigFileHomeMove.xlsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,28 +45,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Android.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Test/Automation/RunAll_Sanity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="27" column="70" lean-forward="true" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,6 +59,14 @@
       <find>CucumberJvm4SMFormatter</find>
       <find>client</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="DigitalApp_Android" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,6 +109,7 @@
     <option name="width" value="1026" />
     <option name="height" value="546" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -166,25 +181,57 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Framework (2)/Framework" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/features" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/IOS" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.RunAll_Sanity">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Home Move" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Etisalat_DigitalApp/IOS/MoveHome.feature" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Selenium-Scripts" />
+      <option name="NAME_FILTER" value="^Home Move$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Home Move$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Home Move" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Search FAQs From Topics and Give Feedback as Yes" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="4" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Android.feature" />
@@ -242,57 +289,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="4" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Android.feature" />
-      <option name="GLUE" value="Test.Automation.Stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="selenium-scripts" />
-      <option name="NAME_FILTER" value="^$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: " />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunAll_Sanity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="selenium-scripts" />
+      <module name="Selenium-Scripts" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Test.Automation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="PACKAGE_NAME" value="Test.Automation" />
       <option name="MAIN_CLASS_NAME" value="Test.Automation.RunAll_Sanity" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber java.Scenario: User Click Anywhere Successfully" />
-      <item itemvalue="Cucumber java.Scenario: " />
-      <item itemvalue="Cucumber java.Scenario: Search FAQs From Topics and Give Feedback as Yes" />
-      <item itemvalue="Cucumber java.Scenario: Search in help and support and verify FAQ results are fetched" />
+      <item itemvalue="Cucumber Java.Scenario: Search FAQs From Topics and Give Feedback as Yes" />
+      <item itemvalue="Cucumber Java.Scenario: Search in help and support and verify FAQ results are fetched" />
+      <item itemvalue="Cucumber Java.Scenario: User Click Anywhere Successfully" />
       <item itemvalue="JUnit.RunAll_Sanity" />
+      <item itemvalue="Cucumber Java.Scenario: Home Move" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RunAll_Sanity" />
-        <item itemvalue="Cucumber java.Scenario: Search in help and support and verify FAQ results are fetched" />
-        <item itemvalue="Cucumber java.Scenario: Search FAQs From Topics and Give Feedback as Yes" />
-        <item itemvalue="Cucumber java.Scenario: User Click Anywhere Successfully" />
-        <item itemvalue="Cucumber java.Scenario: " />
+        <item itemvalue="Cucumber Java.Scenario: Home Move" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -317,6 +346,7 @@
       <workItem from="1614936235369" duration="2415000" />
       <workItem from="1614941900719" duration="1393000" />
       <workItem from="1614947596480" duration="10551000" />
+      <workItem from="1615544957785" duration="9880000" />
     </task>
     <servers />
   </component>
@@ -391,7 +421,18 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/Test/Automation/Utils/PropertyReader.java">

@@ -20,7 +20,7 @@ public class ExcelFileManager extends DriverFactory {
     protected static XSSFCellStyle fail;
     protected static XSSFCellStyle wrapText;
     protected static XSSFCellStyle pass;
-    public ExcelFileManager() throws IOException, SQLException, ClassNotFoundException {
+    public ExcelFileManager() throws Exception {
     }
 
     protected static void createFile(String filename,String Sheet) throws IOException {

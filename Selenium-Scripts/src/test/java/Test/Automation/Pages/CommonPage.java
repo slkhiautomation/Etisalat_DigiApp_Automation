@@ -26,12 +26,13 @@ public class CommonPage extends DriverFactory {
     @FindBy(how= How.XPATH,using=".//*[@id='locations']")
     public static WebElement Location;
 
-    public static String fileName =(new PropertyReader().readProperty("appConfigFile"));
+    public static String fileName =(new PropertyReader().readProperty("excelFileName"));
     public static String ConfigfileName;
 
     static {
         try {
             ConfigfileName = readFromCell(fileName,"SetUp",1,"fileName");
+            System.out.println(ConfigfileName+" is Test Identifiers File Name");
         } catch (IOException e) {
             e.printStackTrace();
         }

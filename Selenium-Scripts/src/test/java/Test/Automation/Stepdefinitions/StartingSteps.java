@@ -7,6 +7,8 @@ import Test.Automation.Utils.UtilityMethods;
 import com.cucumber.listener.Reporter;
 import cucumber.api.java.en.Given;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,7 @@ import java.sql.SQLException;
 
 public class StartingSteps extends DriverFactory {
 
-    public StartingSteps() throws SQLException {
+    public StartingSteps() throws Exception {
     }
 
     @Given("^Navigate to Application$")
@@ -47,10 +49,15 @@ public class StartingSteps extends DriverFactory {
     public void user_has_opened_an_application() throws Throwable {
 
         try {
-            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-        } catch (MalformedURLException e) {
+            driver = new IOSDriver<IOSElement>(url, cap);
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        /*try {
+            driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }*/
 
     }
 

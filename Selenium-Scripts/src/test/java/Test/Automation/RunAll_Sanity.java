@@ -18,8 +18,8 @@ import java.sql.SQLException;
 
 
         //Execution//
-        tags = {"@POST"},
-        features = {"src/test/resources/features/API/API.feature"},
+//        tags = {"@POST"},
+        features = {"src/test/resources/Etisalat_DigitalApp/IOS/MoveHome.feature"},
 //        features = {"src/test/resources/features/Login.feature"},
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",
                 "json:target/cucumber-json-report-Sanity.json",

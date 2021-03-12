@@ -64,7 +64,7 @@ public class UtilityMethods extends DriverFactory {
     private static final Wait<WebDriver> wait = new WebDriverWait(driver, 15);
 
 
-    public UtilityMethods() throws IOException, SQLException, ClassNotFoundException {
+    public UtilityMethods() throws Exception {
 
 
     }
