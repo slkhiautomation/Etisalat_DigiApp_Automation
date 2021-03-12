@@ -26,9 +26,9 @@ import static Test.Automation.Utils.DriverFactory.quitDriver;
 //                        "@Group-Popup-Case_3,@Group-Popup-Case_5"},
 //        src\test\resources\features\Android.feature
 //        features = {"src/test/resources/samples/Android.feature"},
-//        features = {"src/test/resources/Etisalat_DigitalApp/Android/HelpAndSupport.feature"},
+        features = {"src/test/resources/Etisalat_DigitalApp/Android/HelpAndSupport.feature"},
 //        features = {"src/test/resources/samples/API.feature"},
-        features = {"src/test/resources/Etisalat_DigitalApp/Android/Migration.feature"},
+//        features = {"src/test/resources/Etisalat_DigitalApp/Android/Migration.feature"},
 
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",
                 "json:target/cucumber-json-report-Sanity.json",
