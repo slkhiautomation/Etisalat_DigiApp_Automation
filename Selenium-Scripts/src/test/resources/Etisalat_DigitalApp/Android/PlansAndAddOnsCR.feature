@@ -16,3 +16,5 @@ Feature: Plans and Add ons feature file
     When user click on "AddOns" on "PlansAndAddonsPage"
     When user click on "AddOnsTab" on "PlansAndAddonsPage"
     When user click on "AddOnsDrop" on "PlansAndAddonsPage"
+    When user click on "AddOnsSelect" on "PlansAndAddonsPage"
+    When user click on "Subcribe" on "PlansAndAddonsPage"
