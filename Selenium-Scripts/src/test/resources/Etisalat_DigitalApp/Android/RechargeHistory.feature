@@ -13,6 +13,8 @@ Feature: Recharge History
   Scenario: Verify the Recharge History
     When user click on "notNow" button on "RechargeHistoryPage"
     And user click on "userPlan" button on "RechargeHistoryPage"
+    Then Assert that "Consumption" appear on "RechargeHistoryPage"
     Given user scroll to "RechargeHistoryButton" on "RechargeHistoryPage"
     And user click on "RechargeHistoryButton" button on "RechargeHistoryPage"
+    Then Assert that "RechargeHistoryTab" appear on "RechargeHistoryPage"
     Then Assert that "Transaction" appear on "RechargeHistoryPage"
