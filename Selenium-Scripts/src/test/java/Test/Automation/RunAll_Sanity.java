@@ -21,15 +21,15 @@ import static Test.Automation.Utils.DriverFactory.quitDriver;
 
 
         //Execution//
-        tags = {"@Plans_and_Addons_Scenario_1"},
+        tags = {"@HomeMove1"},
 //                "@Group-Popup-Case_1,@Group-Popup-Case_2," +
 //                        "@Group-Popup-Case_3,@Group-Popup-Case_5"},
-//        src\test\resources\features\Android.feature
+        features = {"src/test/resources/Etisalat_DigitalApp/Android/MoveHome.feature"},
 //        features = {"src/test/resources/samples/Android.feature"},
-        features = {"src/test/resources/Etisalat_DigitalApp/Android/PlansAndAddOnsCR.feature"},
+//        features = {"src/test/resources/Etisalat_DigitalApp/Android/PlansAndAddOnsCR.feature"},
 //        features = {"src/test/resources/Etisalat_DigitalApp/Android/HelpAndSupport.feature"},
 //        features = {"src/test/resources/samples/API.feature"},
-//        features = {"src/test/resources/Etisalat_DigitalApp/Android/Migration.feature"},
+//        features = {"src/test/resources/Etisalat_DigitalApp/Android/UDMigrationPPM.feature"},
 
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",
                 "json:target/cucumber-json-report-Sanity.json",

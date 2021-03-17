@@ -110,4 +110,9 @@ public class CommonStepDefs extends DriverFactory {
 
     }
 
+    @And("user wait for 5 second")
+    public void user_wait_for_two_second() throws InterruptedException {
+        Thread.sleep(30000);
+    }
+
 }
