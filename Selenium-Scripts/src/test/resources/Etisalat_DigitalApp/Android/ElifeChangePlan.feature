@@ -32,30 +32,30 @@ Feature: Elife Change Plan
 
     Then Assert that "optionAddons" appear on "elifeChangePlanPage"
 
-    Then Assert that "currentPlan" appear on "elifngePlanPage"
-    Then Assert that "newPlan" appear on "elifngePlanPage"
-    Then Assert that "general" appear on "elifngePlanPage"
-    Then Assert that "termsAndConditions" appear on "elifngePlanPage"
+    Then Assert that "currentPlan" appear on "elifeChangePlanPage"
+    Then Assert that "newPlan" appear on "elifeChangePlanPage"
+    Then Assert that "general" appear on "elifeChangePlanPage"
+    Then Assert that "termsAndConditions" appear on "elifeChangePlanPage"
     #When user click on "termsAndConditions" button on "elifeChangePlanPage"
 #multiLevel assertion
-    Then Assert that "alreadyexist" appear on "elifngePlanPage"
-    Then Assert that "newlyCaptured" appear on "elifngePlanPage"
+    Then Assert that "alreadyexist" appear on "elifeChangePlanPage"
+    Then Assert that "newlyCaptured" appear on "elifeChangePlanPage"
 #capture newly created??
-    Then Assert that Value "freedelievry" is appeared at "freedelievry" on "elifngePlanPage"
+    Then Assert that Value "freedelievry" is appeared at "freedelievry" on "elifeChangePlanPage"
 
-    And user select on "installationDate" on "elifeCeChangePlanPage"
-    Then Assert that Value "reviewDetail" is appeared at "reviewDetail" on "elifngePlanPage"
+    And user select on "installationDate" on "elifeChangePlanPage"
+    Then Assert that Value "reviewDetail" is appeared at "reviewDetail" on "elifeChangePlanPage"
     And user click on "confirmRequest" on "elifeChangePlanPage"
 
-    Then Assert that Value "SuccessMsg" is appeared at "successMsg" on "elifngePlanPage"
+    Then Assert that Value "SuccessMsg" is appeared at "successMsg" on "elifeChangePlanPage"
       #ifelse
-    Then Assert that "woCreation" appear on "elifngePlanPage"
-    Then Assert that "newPackage" appear on "elifngePlanPage"
+    Then Assert that "woCreation" appear on "elifeChangePlanPage"
+    Then Assert that "newPackage" appear on "elifeChangePlanPage"
 #email and Sms assertion
-    Then Assert that "montlyCharges" appear on "elifngePlanPage"
-    Then Assert that "proratedCharges" appear on "elifngePlanPage"
-    Then Assert that Value "monthlyRentalCharges" is appeared at " monthlyRentalCharges " on "elifngePlanPage"
+    Then Assert that "montlyCharges" appear on "elifeChangePlanPage"
+    Then Assert that "proratedCharges" appear on "elifeChangePlanPage"
+    Then Assert that Value "monthlyRentalCharges" is appeared at " monthlyRentalCharges " on "elifeChangePlanPage"
 
 #monthly addon
-    Then Assert that "ExistCharges" appear on "elifngePlanPage"
+    Then Assert that "ExistCharges" appear on "elifeChangePlanPage"
  #exist charges flow
