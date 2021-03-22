@@ -142,8 +142,9 @@ public class DriverFactory {
 		cap.setCapability("platformName", new PropertyReader().readProperty("platformName"));
 		cap.setCapability("appPackage", new PropertyReader().readProperty("appPackage"));
 		cap.setCapability("appActivity", new PropertyReader().readProperty("appActivity"));
+//		cap.setCapability("app", new PropertyReader().readProperty("app"));
 		cap.setCapability("autoGrantPermissions", true);
-		cap.setCapability("noReset", true);
+		//cap.setCapability("noReset", true);
 		driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
 	}
 

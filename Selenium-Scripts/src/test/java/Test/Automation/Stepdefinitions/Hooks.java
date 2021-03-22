@@ -1,10 +1,7 @@
 package Test.Automation.Stepdefinitions;
 
 import Test.Automation.Utils.DriverFactory;
-import Test.Automation.Utils.ExcelFileManager;
-import Test.Automation.Utils.PropertyReader;
 import Test.Automation.Utils.UtilityMethods;
-//import com.cucumber.listener.Reporter;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 import cucumber.api.Scenario;
@@ -17,7 +14,8 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.sql.SQLException;
+
+//import com.cucumber.listener.Reporter;
 
 //import cucumber.TestContext;
 
@@ -36,7 +34,8 @@ public class Hooks extends DriverFactory {
     @Before
     public void beforeScenario(Scenario scenario) {
 
-        Reporter.loadXMLConfig(new File("src\\extent-config.xml"));
+        //Reporter.loadXMLConfig(new File("src\\extent-config.xml"));
+       // Reporter.loadXMLConfig(new File("Selenium-Scripts/src/extent-config.xml"));
         Reporter.assignAuthor(System.getProperty("user.name"));
         Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
         Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
