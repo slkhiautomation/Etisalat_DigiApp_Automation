@@ -17,8 +17,11 @@ import java.sql.SQLException;
 @CucumberOptions(
 
 
-        //Execution//
-//        tags = {"@POST"},
+        //Execution//sourcePath
+       // tags = {"@POST"},
+
+     //   features = {"src/test/resources/Etisalat_DigitalApp/IOS/UDMigrationPPM.feature"},
+       // features = {"src/test/resources/Etisalat_DigitalApp/IOS/PlansAndAddOnsCR.feature"},
         features = {"src/test/resources/Etisalat_DigitalApp/IOS/MoveHome.feature"},
 //        features = {"src/test/resources/features/Login.feature"},
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",

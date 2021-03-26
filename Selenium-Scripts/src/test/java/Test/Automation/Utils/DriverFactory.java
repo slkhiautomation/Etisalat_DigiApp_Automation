@@ -1,5 +1,6 @@
 package Test.Automation.Utils;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
@@ -30,6 +31,7 @@ public class DriverFactory {
 	protected static DesiredCapabilities cap;
 	public static String JDBC_URL = "jdbc:oracle:thin:@//"+Connection_url;
 	public static URL url;
+	//public static AppiumDriver driver;
 
 
 	public DriverFactory() throws Exception {
@@ -158,12 +160,15 @@ public class DriverFactory {
 
 			cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, new PropertyReader().readProperty("PLATFORM_NAME"));
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, new PropertyReader().readProperty("XCUITest"));
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, new PropertyReader().readProperty("AUTOMATION_NAME"));
 			cap.setCapability("useNewWDA", false);
 			cap.setCapability("updatedWDABundleId", new PropertyReader().readProperty("BandleID"));
 			cap.setCapability("xcodeOrgId", new PropertyReader().readProperty("xcodeOrgId"));
 			cap.setCapability("xcodeSigningId", new PropertyReader().readProperty("xcodeSigningId"));
 			cap.setCapability("noReset", true);
+			cap.setCapability("clearSystemFiles", true);
+
+
 			if (deviceName.equalsIgnoreCase(new PropertyReader().readProperty("DEVICE_NAME"))) {
 				cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, new PropertyReader().readProperty("PLATFORM_VERSION"));
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, new PropertyReader().readProperty("DEVICE_NAME"));

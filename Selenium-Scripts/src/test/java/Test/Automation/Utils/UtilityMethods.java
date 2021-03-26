@@ -12,6 +12,7 @@ import com.google.common.io.Files;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -35,6 +36,7 @@ import javax.mail.Store;
 
 import com.cucumber.listener.Reporter;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import org.apache.commons.io.FileUtils;
@@ -76,9 +78,39 @@ public class UtilityMethods extends DriverFactory {
     }
 
     public static void elementClick(String xPath) throws IOException {
-        WebElement element = driver.findElement(By.xpath(xPath));
+        WebElement element = ((AppiumDriver)driver).findElement(By.xpath(xPath));
         element.click();
     }
+    public static WebElement getElementByXpath(String xpath){
+        WebElement element = driver.findElement(By.xpath(xpath));
+        return element;
+    }
+    public static WebElement getElementById(String id){
+        WebElement element = ((AppiumDriver)driver).findElement(By.id(id));
+        return element;
+    }
+    public static WebElement getElementByName(String name){
+        WebElement element = ((AppiumDriver)driver).findElement(By.name(name));
+        return element;
+    }
+    public static WebElement getElementByClassName(String classname){
+        WebElement element= ((AppiumDriver)driver).findElement(By.className(classname));
+        return element;
+    }
+    public static WebElement getElementByLinkText(String linktext){
+        WebElement element= ((AppiumDriver)driver).findElement(By.linkText(linktext));
+        return element;
+    }
+    public static WebElement getElementByPartialLinkText(String partiallinktext) {
+        WebElement element = ((AppiumDriver)driver).findElement(By.partialLinkText(partiallinktext));
+        return element;
+    }
+
+    public static WebElement getElementByAccessibilityId(String AccessibilityId) {
+        WebElement element = ((AppiumDriver)driver).findElementByAccessibilityId(AccessibilityId);
+        return element;
+    }
+
 
     public static void elementSendKeys(String xPath, Keys key)
     {
@@ -140,12 +172,16 @@ public class UtilityMethods extends DriverFactory {
         }
 
     public static void TakeSnapShot() throws Throwable{
+        UtilityMethods.wait3Seconds();
         String screenshotName = "";
         //DriverFactory obj = new DriverFactory.getDriver();
+        DateFormat dateFormat;
+        dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
         File sourcePath = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-        File destinationPath = new File( sourcePath + screenshotName + ".png");
+        String timestamp = dateFormat.format(new Date());
+        File destinationPath = new File( System.getProperty("user.dir")+"/target/cucumber-reports/screenshots/" + timestamp  + ".png");
         Files.copy(sourcePath,destinationPath);
-        Reporter.addScreenCaptureFromPath(destinationPath.toString());
+        Reporter.addScreenCaptureFromPath("screenshots/" + timestamp  + ".png");
     }
 
 
