@@ -1,39 +1,8 @@
 package Test.Automation.Utils;
 
-import static Test.Automation.Utils.DataPool.readExcelData;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.awt.*;
-import java.io.*;
-
-import com.google.common.io.Files;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.sql.SQLException;
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Properties;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
-import javax.mail.Authenticator;
-import javax.mail.Flags;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.NoSuchProviderException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Store;
-
 import com.cucumber.listener.Reporter;
+import com.google.common.base.Function;
+import com.google.common.io.Files;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
@@ -43,20 +12,30 @@ import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
 import org.junit.Assert;
-import org.openqa.selenium.*;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
+import javax.mail.*;
+import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
-import com.google.common.base.Function;
+import static Test.Automation.Utils.DataPool.readExcelData;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 
 public class UtilityMethods extends DriverFactory {
@@ -102,7 +81,12 @@ public class UtilityMethods extends DriverFactory {
     public static WebElement getElementByXpath(String xpath, int timeOut){
         WebDriverWait wait = new WebDriverWait(driver,timeOut);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-        //WebElement element = driver.findElement(By.xpath(xpath));
+//        WebElement element = driver.findElement(By.xpath(xpath));
+        return element;
+    }
+    public static WebElement getElementById(String id,int timeOut){
+        WebDriverWait wait = new WebDriverWait(driver,timeOut);
+        WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
         return element;
     }
 
@@ -139,14 +123,26 @@ public class UtilityMethods extends DriverFactory {
 
         }
 
-    public static void TakeSnapShot() throws Throwable{
-        String screenshotName = "";
-        //DriverFactory obj = new DriverFactory.getDriver();
-        File sourcePath = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-        File destinationPath = new File( sourcePath + screenshotName + ".png");
-        Files.copy(sourcePath,destinationPath);
-        Reporter.addScreenCaptureFromPath(destinationPath.toString());
-    }
+//    public static void TakeSnapShot() throws Throwable{
+//        String screenshotName = "";
+//        //DriverFactory obj = new DriverFactory.getDriver();
+//        File sourcePath = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+//        File destinationPath = new File( sourcePath + screenshotName + ".png");
+//        Files.copy(sourcePath,destinationPath);
+//        Reporter.addScreenCaptureFromPath(destinationPath.toString());
+//    }
+       public static void TakeSnapShot() throws Throwable{
+            UtilityMethods.wait6Seconds();
+            String screenshotName = "";
+            //DriverFactory obj = new DriverFactory.getDriver();
+            DateFormat dateFormat;
+            dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
+            File sourcePath = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+            String timestamp = dateFormat.format(new Date());
+            File destinationPath = new File( System.getProperty("user.dir")+"/target/cucumber-reports/screenshots/" + timestamp  + ".png");
+            Files.copy(sourcePath,destinationPath);
+            Reporter.addScreenCaptureFromPath("screenshots/" + timestamp  + ".png");
+        }
 
 
     public static WebElement getElementWithTextProduct() throws IOException{
@@ -440,6 +436,10 @@ public class UtilityMethods extends DriverFactory {
 
     public static void waitForVisibility(WebElement element) {
         new WebDriverWait(driver, 300).until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void waitForVisibility120(WebElement element) {
+        new WebDriverWait(driver, 120000).until(ExpectedConditions.visibilityOf(element));
     }
 
     public static void waitForVisibility10(WebElement element) {

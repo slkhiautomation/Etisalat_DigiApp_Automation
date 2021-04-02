@@ -43,18 +43,18 @@ public class StartingSteps extends DriverFactory {
         }
     }
 
-    @Given("^User has opened an application$")
-    public void user_has_opened_an_application() throws Throwable {
-
-        try {
-            String URL = new PropertyReader().readProperty("AndroidappURL");
-//            driver.get(URL);
-            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-    }
+//    @Given("^User has opened an application$")
+//    public void user_has_opened_an_application() throws Throwable {
+//
+//        try {
+//            String URL = new PropertyReader().readProperty("AndroidappURL");
+////            driver.get(URL);
+//            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
     @Given("^Navigate to Web Application$")
     public void navigate_to_web_Application() throws Throwable {

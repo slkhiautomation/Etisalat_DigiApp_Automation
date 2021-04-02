@@ -16,6 +16,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
@@ -142,11 +143,25 @@ public class DriverFactory {
 		cap.setCapability("platformName", new PropertyReader().readProperty("platformName"));
 		cap.setCapability("appPackage", new PropertyReader().readProperty("appPackage"));
 		cap.setCapability("appActivity", new PropertyReader().readProperty("appActivity"));
+		cap.setCapability("newCommandTimeout", 30000);
 //		cap.setCapability("app", new PropertyReader().readProperty("app"));
 		cap.setCapability("autoGrantPermissions", true);
-		//cap.setCapability("noReset", true);
+		cap.setCapability("noReset", true);
 		driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+//	private void createAndroidDriverInstance() throws Exception {
+//		cap = new DesiredCapabilities();
+//		cap.setCapability("deviceName",new PropertyReader().readProperty("android"));
+//		cap.setCapability("platformName", new PropertyReader().readProperty("android"));
+//		cap.setCapability("appPackage", new PropertyReader().readProperty("com.Etisalat.ETIDA"));
+//		cap.setCapability("appActivity", new PropertyReader().readProperty("com.etisalat.etida.home.activities.SplashActivity"));
+//		cap.setCapability("app", new PropertyReader().readProperty("app"));
+//		cap.setCapability("autoGrantPermissions", true);
+//		cap.setCapability("noReset", true);
+//		driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//	}
 
 
 }

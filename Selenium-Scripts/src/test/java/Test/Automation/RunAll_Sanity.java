@@ -1,5 +1,7 @@
 package Test.Automation;
 
+import Test.Automation.DataProvider.TestData;
+import Test.Automation.Utils.SendEmailSetup.SendEmail;
 import TestSuite.AfterSuite;
 import TestSuite.BeforeSuite;
 import TestSuite.ExtendedCucumberRunner;
@@ -21,15 +23,10 @@ import static Test.Automation.Utils.DriverFactory.quitDriver;
 
 
         //Execution//
-        tags = {"@HomeMove1"},
+//        tags = {"@Plans_and_Addons_Scenario_1"},
 //                "@Group-Popup-Case_1,@Group-Popup-Case_2," +
 //                        "@Group-Popup-Case_3,@Group-Popup-Case_5"},
-        features = {"src/test/resources/Etisalat_DigitalApp/Android/MoveHome.feature"},
-//        features = {"src/test/resources/samples/Android.feature"},
-//        features = {"src/test/resources/Etisalat_DigitalApp/Android/PlansAndAddOnsCR.feature"},
-//        features = {"src/test/resources/Etisalat_DigitalApp/Android/HelpAndSupport.feature"},
-//        features = {"src/test/resources/samples/API.feature"},
-//        features = {"src/test/resources/Etisalat_DigitalApp/Android/UDMigrationPPM.feature"},
+        features = {"src/test/resources/Etisalat_DigitalApp/Android/177605-Home_Move.feature"},
 
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",
                 "json:target/cucumber-json-report-Sanity.json",
@@ -61,7 +58,7 @@ public class RunAll_Sanity  {
         Reporter.setSystemInfo("Selenium", "3.7.0");
         Reporter.setSystemInfo("Maven", "3.5.2");
         Reporter.setSystemInfo("Java Version", System.getProperty("java.version"));
-//        SendEmail.sendEmailBody(TestData.Email.EMAIL_RESULT_SUBJECT, "cucumber-json-report-Sanity");
+        SendEmail.sendEmailBody(TestData.Email.EMAIL_RESULT_SUBJECT, "cucumber-json-report-Sanity");
         quitDriver();
     }
 }

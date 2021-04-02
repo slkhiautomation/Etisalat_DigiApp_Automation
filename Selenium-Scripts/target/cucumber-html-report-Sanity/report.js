@@ -1,19 +1,18 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/Android.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/Etisalat_DigitalApp/Android/HomeMove.feature");
 formatter.feature({
   "line": 1,
-  "name": "Open Help and Support and Search for any FAQ",
+  "name": "Login into Home Move Application and Submit a Home Move Request",
   "description": "",
-  "id": "open-help-and-support-and-search-for-any-faq",
+  "id": "login-into-home-move-application-and-submit-a-home-move-request",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2820835059,
-  "error_message": "org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:144)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.\u003cinit\u003e(DefaultGenericMobileDriver.java:39)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:69)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:78)\r\n\tat io.appium.java_client.android.AndroidDriver.\u003cinit\u003e(AndroidDriver.java:67)\r\n\tat Test.Automation.Utils.DriverFactory.createAndroidDriverInstance(DriverFactory.java:184)\r\n\tat Test.Automation.Utils.DriverFactory.initialize(DriverFactory.java:53)\r\n\tat Test.Automation.Utils.DriverFactory.\u003cinit\u003e(DriverFactory.java:34)\r\n\tat Test.Automation.Stepdefinitions.Hooks.\u003cinit\u003e(Hooks.java:28)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)\r\n\tat org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)\r\n\tat org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)\r\n\tat org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)\r\n\tat org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)\r\n\tat org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)\r\n\tat org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)\r\n\tat org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)\r\n\tat cucumber.runtime.java.picocontainer.PicoFactory.getInstance(PicoFactory.java:40)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat TestSuite.ExtendedCucumberRunner.run(ExtendedCucumberRunner.java:50)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\r\nCaused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)\r\n\t... 59 more\r\nCaused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)\r\n\tat org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)\r\n\tat org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)\r\n\tat org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)\r\n\tat org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)\r\n\tat org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)\r\n\tat org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)\r\n\tat org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)\r\n\t... 60 more\r\nCaused by: java.net.ConnectException: Connection refused: connect\r\n\tat java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\r\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\r\n\tat java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)\r\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\r\n\tat java.net.Socket.connect(Socket.java:589)\r\n\tat org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)\r\n\t... 73 more\r\n",
-  "status": "failed"
+  "duration": 21709328000,
+  "status": "passed"
 });
 formatter.background({
   "line": 3,
-  "name": "user has opened an application and successfully logged in",
+  "name": "Login into Home Move Application Successfully",
   "description": "",
   "type": "background",
   "keyword": "Background"
@@ -23,290 +22,2017 @@ formatter.step({
   "name": "User has opened an application",
   "keyword": "Given "
 });
-formatter.step({
-  "line": 5,
-  "name": "user click on \"login\" button on \"StartingPage\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 6,
-  "name": "user enter text \"username\" in \"usernameField\" on \"LoginPage\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "user enter text \"password\" in \"passwordField\" on \"LoginPage\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "user click on \"login\" button on \"LoginPage\"",
-  "keyword": "When "
-});
 formatter.match({
-  "location": "StartingSteps.user_has_opened_an_application()"
+  "location": "CommonStepDefs.user_has_opened_an_application()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "login",
-      "offset": 15
-    },
-    {
-      "val": "StartingPage",
-      "offset": 33
-    }
-  ],
-  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "username",
-      "offset": 17
-    },
-    {
-      "val": "usernameField",
-      "offset": 31
-    },
-    {
-      "val": "LoginPage",
-      "offset": 50
-    }
-  ],
-  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "password",
-      "offset": 17
-    },
-    {
-      "val": "passwordField",
-      "offset": 31
-    },
-    {
-      "val": "LoginPage",
-      "offset": 50
-    }
-  ],
-  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "login",
-      "offset": 15
-    },
-    {
-      "val": "LoginPage",
-      "offset": 33
-    }
-  ],
-  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 23707870300,
+  "status": "passed"
 });
 formatter.scenario({
-  "line": 11,
-  "name": "Search in help and support and verify FAQ results are fetched",
+  "comments": [
+    {
+      "line": 5,
+      "value": "#    When user click on \"skip\" button on \"StartingPage\""
+    },
+    {
+      "line": 6,
+      "value": "#    When user click on \"loginWithUsername\" button on \"StartingPage\""
+    },
+    {
+      "line": 7,
+      "value": "#    And user enter text \"homeMoveUsername\" in \"usernameField\" on \"LoginPage\""
+    },
+    {
+      "line": 8,
+      "value": "#    And user enter text \"homeMovePassword\" in \"passwordField\" on \"LoginPage\""
+    },
+    {
+      "line": 9,
+      "value": "#    And user wait for 5 second"
+    },
+    {
+      "line": 10,
+      "value": "#    When user click on \"login\" button on \"LoginPage\""
+    },
+    {
+      "line": 11,
+      "value": "#    And user wait for 5 second"
+    },
+    {
+      "line": 12,
+      "value": "#    When user click on \"notNow\" button on \"HomePage\""
+    }
+  ],
+  "line": 15,
+  "name": "Home Move External Shift Within Emirate without number change",
   "description": "",
-  "id": "open-help-and-support-and-search-for-any-faq;search-in-help-and-support-and-verify-faq-results-are-fetched",
+  "id": "login-into-home-move-application-and-submit-a-home-move-request;home-move-external-shift-within-emirate-without-number-change",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 10,
-      "name": "@FaqTest"
+      "line": 14,
+      "name": "@Home_Move_with_Emirates"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "user click on \"notNow\" button on \"HomePage\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "user click on \"topRightMenu\" button on \"HomePage\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "user scroll till text \"Help \u0026 Support\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 15,
-  "name": "user click on \"helpAndSupport\" button on \"Menu\"",
-  "keyword": "And "
-});
-formatter.step({
   "line": 16,
-  "name": "user scroll till text \"Self Support\"",
+  "name": "user click on \"userPlan\" button on \"Homepage\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 17,
-  "name": "user click on \"selfSupport\" button on \"Menu\"",
+  "name": "user click on \"manageTab\" button on \"detailsPage\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 18,
-  "name": "user enter text \"searchQuery\" in \"searchField\" on \"HelpAndSupport\"",
+  "name": "user click on \"Plan\" button on \"detailsPage\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 19,
-  "name": "Assert that \"FaqSection\" appear on \"HelpAndSupport\"",
+  "name": "user click on \"HomeMove\" button on \"detailsPage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "Assert that \"ApplyInFewSteps\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 21,
+  "name": "user click on \"GetStarted\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "user click on \"setFromMap\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "user click on \"searchOnMapField\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "user enter text \"addressOnMap\" in \"EnterTextField\" on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 25,
+  "name": "user click on \"searchedAddress\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "user click on \"confirmLocation\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 27,
+  "name": "user click on \"ExactAddressNumber\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "user enter text \"FloorApartmentVilla\" in \"ExactAddressNumber\" on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 29,
+  "name": "user dismiss keyboard",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 31,
+      "value": "#    And user click on \"changeNumber\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 32,
+      "value": "#    And user select on \"NumberToBeChanged\" on \"HomeMovePage\""
+    },
+    {
+      "line": 33,
+      "value": "#    And user click on \"continue\" button on \"HomeMovePage\""
+    }
+  ],
+  "line": 34,
+  "name": "user click on \"movingDate\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 36,
+      "value": "#    And user click on \"selectDate\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 37,
+      "value": "#    And user click on \"selectTime\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 38,
+      "value": "#    And user click on \"continue\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 39,
+      "value": "#    Then Assert that \"TelephoneNumber\" appear on \"HomeMovePage\""
+    }
+  ],
+  "line": 40,
+  "name": "user click on \"acceptAndContinue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 41,
+  "name": "Assert that \"PaymentSummaryTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 42,
+  "name": "Assert that \"PaymentSummaryMethod\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 43,
+  "name": "Assert that \"PaymentSummaryDescription\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 44,
+  "name": "Assert that \"StandardInstallationTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 45,
+  "name": "Assert that \"OneTimeCharge\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 46,
+  "name": "Assert that \"OneTimeChargeValue\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "Assert that \"VATTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 48,
+  "name": "Assert that \"VATDescription\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 49,
+  "name": "Assert that \"VATValue\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "Assert that \"HomeMoveRequestTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 51,
+  "name": "Assert that \"TotalAmount\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "Assert that \"AccountNumber\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 53,
+  "name": "Assert that \"InstallationAdress\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 54,
+  "name": "Assert that \"Moveoutdate\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "Assert that \"Yourcontactdetails\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 56,
+      "value": "#    Then Assert that \"Installationdate\" appear on \"HomeMovePage\""
+    }
+  ],
+  "line": 57,
+  "name": "Assert that \"Packagename\" appear on \"HomeMovePage\"",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "notNow",
+      "val": "userPlan",
       "offset": 15
     },
     {
-      "val": "HomePage",
-      "offset": 34
+      "val": "Homepage",
+      "offset": 36
     }
   ],
   "location": "CommonStepDefs.user_click_on_button_on(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 11210197200,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "topRightMenu",
+      "val": "manageTab",
       "offset": 15
     },
     {
-      "val": "HomePage",
+      "val": "detailsPage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1847120100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Plan",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 32
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 6354270900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "HomeMove",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1135716300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ApplyInFewSteps",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 41
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1811822800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "GetStarted",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1148241200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "setFromMap",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1098380900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "searchOnMapField",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2973140500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "addressOnMap",
+      "offset": 17
+    },
+    {
+      "val": "EnterTextField",
+      "offset": 35
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 55
+    }
+  ],
+  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
+});
+formatter.result({
+  "duration": 3220719200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "searchedAddress",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 43
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2470568300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "confirmLocation",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 43
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 3445825800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ExactAddressNumber",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 29678663600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "FloorApartmentVilla",
+      "offset": 17
+    },
+    {
+      "val": "ExactAddressNumber",
+      "offset": 42
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 66
+    }
+  ],
+  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
+});
+formatter.result({
+  "duration": 2593649200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CommonStepDefs.user_dismiss_keyboard()"
+});
+formatter.result({
+  "duration": 1978366000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 940037000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "movingDate",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2024161200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 889475000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "acceptAndContinue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 45
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1184913100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 45
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1547885800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryMethod",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1077348000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryDescription",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 51
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1073549200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "StandardInstallationTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 51
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1028221400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "OneTimeCharge",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 39
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1132993800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "OneTimeChargeValue",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1560903900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 34
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1458856500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATDescription",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 40
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1047054500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATValue",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 34
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1067404100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "HomeMoveRequestTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1018058100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "TotalAmount",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1007948800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "AccountNumber",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 39
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1041152700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "InstallationAdress",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1566294300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Moveoutdate",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1056103200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Yourcontactdetails",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1058604500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Packagename",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 948715700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 153500,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 26700,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 148300,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "Login into Home Move Application Successfully",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User has opened an application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "CommonStepDefs.user_has_opened_an_application()"
+});
+formatter.result({
+  "duration": 16990757800,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 58,
+      "value": "#    And user click on \"SubmmitRequest\" button on \"HomeMovePage\""
+    }
+  ],
+  "line": 61,
+  "name": "External Shit outside Emirate, with number change",
+  "description": "",
+  "id": "login-into-home-move-application-and-submit-a-home-move-request;external-shit-outside-emirate,-with-number-change",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 60,
+      "name": "@Home_Move_out_of_Emirates"
+    }
+  ]
+});
+formatter.step({
+  "line": 62,
+  "name": "user click on \"userPlan\" button on \"Homepage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 63,
+  "name": "user click on \"manageTab\" button on \"detailsPage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 64,
+  "name": "user click on \"Plan\" button on \"detailsPage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 65,
+  "name": "user click on \"HomeMove\" button on \"detailsPage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 66,
+  "name": "Assert that \"ApplyInFewSteps\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 67,
+  "name": "user click on \"GetStarted\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 68,
+  "name": "user click on \"setFromMap\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 69,
+  "name": "user click on \"searchOnMapField\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 70,
+  "name": "user enter text \"addressOutsideEmirates\" in \"EnterTextField\" on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 71,
+  "name": "user click on \"searchedAddress\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 72,
+  "name": "user click on \"confirmLocation\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 73,
+  "name": "user click on \"ExactAddressNumber\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 74,
+  "name": "user enter text \"FloorApartmentVilla\" in \"ExactAddressNumber\" on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 75,
+  "name": "user dismiss keyboard",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 76,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 77,
+      "value": "#  Validate on clicking continue, the GPON check is triggered, in this case select GPON location."
+    },
+    {
+      "line": 78,
+      "value": "#  Validate message is displayed informing customer that number will be changed since moving to different emirates."
+    }
+  ],
+  "line": 79,
+  "name": "user click on \"ChangeNumber\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 80,
+  "name": "user select on \"SelectNumber\" on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 81,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 82,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 84,
+  "name": "user click on \"movingDate\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 85,
+  "name": "user click on \"continue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 86,
+      "value": "#  Validate customer gets the option to choose date on which it wishes the installation on new address."
+    },
+    {
+      "line": 87,
+      "value": "#    And user click on \"selectDate\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 88,
+      "value": "#    And user click on \"selectTime\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 89,
+      "value": "#    And user click on \"continue\" button on \"HomeMovePage\""
+    },
+    {
+      "line": 90,
+      "value": "#    Then Assert that \"TelephoneNumber\" appear on \"HomeMovePage"
+    },
+    {
+      "line": 91,
+      "value": "#  Validate dates are listed with dates and next date with \"Express\" tag, which triggers the express flow."
+    },
+    {
+      "line": 92,
+      "value": "#  Validate on selecting standard installation, it displays standard charges, VAT and total charges with continue option."
+    }
+  ],
+  "line": 94,
+  "name": "user click on \"acceptAndContinue\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 95,
+  "name": "Assert that \"PaymentSummaryTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 96,
+  "name": "Assert that \"PaymentSummaryMethod\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 97,
+  "name": "Assert that \"PaymentSummaryDescription\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 98,
+  "name": "Assert that \"StandardInstallationTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 99,
+  "name": "Assert that \"OneTimeCharge\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 100,
+  "name": "Assert that \"OneTimeChargeValue\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 101,
+  "name": "Assert that \"VATTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 102,
+  "name": "Assert that \"VATDescription\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 103,
+  "name": "Assert that \"VATValue\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 104,
+  "name": "Assert that \"HomeMoveRequestTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 105,
+  "name": "Assert that \"TotalAmount\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 106,
+  "name": "Assert that \"AccountNumber\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 107,
+  "name": "Assert that \"InstallationAdress\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 108,
+  "name": "Assert that \"Moveoutdate\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 109,
+  "name": "Assert that \"Yourcontactdetails\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 110,
+      "value": "#    Then Assert that \"Installationdate\" appear on \"HomeMovePage\""
+    }
+  ],
+  "line": 111,
+  "name": "Assert that \"Packagename\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "userPlan",
+      "offset": 15
+    },
+    {
+      "val": "Homepage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 11382831900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "manageTab",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 3886033500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Plan",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 32
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2926677700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "HomeMove",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1094907700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ApplyInFewSteps",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 41
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1863097600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "GetStarted",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1944549900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "setFromMap",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 851795000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "searchOnMapField",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2944196500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "addressOutsideEmirates",
+      "offset": 17
+    },
+    {
+      "val": "EnterTextField",
+      "offset": 45
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 65
+    }
+  ],
+  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
+});
+formatter.result({
+  "duration": 3456686400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "searchedAddress",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 43
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 3205458400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "confirmLocation",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 43
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1125347400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ExactAddressNumber",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 3572431600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "FloorApartmentVilla",
+      "offset": 17
+    },
+    {
+      "val": "ExactAddressNumber",
+      "offset": 42
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 66
+    }
+  ],
+  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
+});
+formatter.result({
+  "duration": 3025283300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CommonStepDefs.user_dismiss_keyboard()"
+});
+formatter.result({
+  "duration": 1866411500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 891013900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ChangeNumber",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
       "offset": 40
     }
   ],
   "location": "CommonStepDefs.user_click_on_button_on(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4236782000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Help \u0026 Support",
+      "val": "SelectNumber",
+      "offset": 16
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 34
+    }
+  ],
+  "location": "CommonStepDefs.user_select_on(String,String)"
+});
+formatter.result({
+  "duration": 1624489700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 939682300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 2402700200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "movingDate",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1372399400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "continue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 865306700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "acceptAndContinue",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 45
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1252145100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 45
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1332976300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryMethod",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 997918700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "PaymentSummaryDescription",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 51
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 985188300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "StandardInstallationTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 51
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 990644300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "OneTimeCharge",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 39
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 949752000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "OneTimeChargeValue",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1053169100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 34
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1027961300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATDescription",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 40
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1031829800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "VATValue",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 34
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 993044800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "HomeMoveRequestTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 46
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 927120900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "TotalAmount",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1054989500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "AccountNumber",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 39
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1007116700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "InstallationAdress",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 965013700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Moveoutdate",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 965386200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Yourcontactdetails",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 44
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 983683500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Packagename",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 988363100,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 49300,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 23800,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 147100,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "Login into Home Move Application Successfully",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "User has opened an application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "CommonStepDefs.user_has_opened_an_application()"
+});
+formatter.result({
+  "duration": 16146649500,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 112,
+      "value": "#        And user click on \"SubmmitRequest\" button on \"HomeMovePage\""
+    }
+  ],
+  "line": 116,
+  "name": "Verify system allow External shift flow by Manage Card\u003e Home Move",
+  "description": "",
+  "id": "login-into-home-move-application-and-submit-a-home-move-request;verify-system-allow-external-shift-flow-by-manage-card\u003e-home-move",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 115,
+      "name": "@Home_Move_Manage_Card"
+    }
+  ]
+});
+formatter.step({
+  "line": 117,
+  "name": "user click on \"userPlan\" button on \"Homepage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 118,
+  "name": "user click on \"manageTab\" button on \"detailsPage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 119,
+  "name": "user scroll till text \"Home Move\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 120,
+  "name": "Assert that \"HomeMoveTitle\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 121,
+      "value": "#    And user click on \"HomeMoveOption\" button on \"detailsPage\""
+    }
+  ],
+  "line": 122,
+  "name": "user click on \"HomeMoveoption\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 123,
+  "name": "Assert that \"HomeMoveHeading\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "comments": [
+    {
+      "line": 124,
+      "value": "# Then Assert that \"HomeMoveImage\" appear on \"HomeMovePage\" this step should be done with isdisplay property"
+    }
+  ],
+  "line": 125,
+  "name": "Assert that \"ApplyInFewSteps\" appear on \"HomeMovePage\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 126,
+  "name": "user click on \"GetStarted\" button on \"HomeMovePage\"",
+  "keyword": "And "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "userPlan",
+      "offset": 15
+    },
+    {
+      "val": "Homepage",
+      "offset": 36
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 11478585100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "manageTab",
+      "offset": 15
+    },
+    {
+      "val": "detailsPage",
+      "offset": 37
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1546110600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Home Move",
       "offset": 23
     }
   ],
   "location": "CommonStepDefs.user_scroll_till_text(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4176363300,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "helpAndSupport",
+      "val": "HomeMoveTitle",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 39
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 3185134500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "HomeMoveoption",
       "offset": 15
     },
     {
-      "val": "Menu",
+      "val": "HomeMovePage",
       "offset": 42
     }
   ],
   "location": "CommonStepDefs.user_click_on_button_on(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1144628900,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Self Support",
-      "offset": 23
-    }
-  ],
-  "location": "CommonStepDefs.user_scroll_till_text(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "selfSupport",
-      "offset": 15
-    },
-    {
-      "val": "Menu",
-      "offset": 39
-    }
-  ],
-  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "searchQuery",
-      "offset": 17
-    },
-    {
-      "val": "searchField",
-      "offset": 34
-    },
-    {
-      "val": "HelpAndSupport",
-      "offset": 51
-    }
-  ],
-  "location": "CommonStepDefs.user_enter_text_in_on(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "FaqSection",
+      "val": "HomeMoveHeading",
       "offset": 13
     },
     {
-      "val": "HelpAndSupport",
-      "offset": 36
+      "val": "HomeMovePage",
+      "offset": 41
     }
   ],
   "location": "CommonStepDefs.assert_that_appear_on(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1603491300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ApplyInFewSteps",
+      "offset": 13
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 41
+    }
+  ],
+  "location": "CommonStepDefs.assert_that_appear_on(String,String)"
+});
+formatter.result({
+  "duration": 1429028800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "GetStarted",
+      "offset": 15
+    },
+    {
+      "val": "HomeMovePage",
+      "offset": 38
+    }
+  ],
+  "location": "CommonStepDefs.user_click_on_button_on(String,String)"
+});
+formatter.result({
+  "duration": 1035909300,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 1009268320,
-  "error_message": "org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:144)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.\u003cinit\u003e(DefaultGenericMobileDriver.java:39)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:69)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:78)\r\n\tat io.appium.java_client.android.AndroidDriver.\u003cinit\u003e(AndroidDriver.java:67)\r\n\tat Test.Automation.Utils.DriverFactory.createAndroidDriverInstance(DriverFactory.java:184)\r\n\tat Test.Automation.Utils.DriverFactory.initialize(DriverFactory.java:53)\r\n\tat Test.Automation.Utils.DriverFactory.\u003cinit\u003e(DriverFactory.java:34)\r\n\tat Test.Automation.Stepdefinitions.Hooks.\u003cinit\u003e(Hooks.java:28)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)\r\n\tat org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)\r\n\tat org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)\r\n\tat org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)\r\n\tat org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)\r\n\tat org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)\r\n\tat org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)\r\n\tat org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)\r\n\tat cucumber.runtime.java.picocontainer.PicoFactory.getInstance(PicoFactory.java:40)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat TestSuite.ExtendedCucumberRunner.run(ExtendedCucumberRunner.java:50)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\r\nCaused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)\r\n\t... 59 more\r\nCaused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)\r\n\tat org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)\r\n\tat org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)\r\n\tat org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)\r\n\tat org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)\r\n\tat org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)\r\n\tat org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)\r\n\tat org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)\r\n\t... 60 more\r\nCaused by: java.net.ConnectException: Connection refused: connect\r\n\tat java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\r\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\r\n\tat java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)\r\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\r\n\tat java.net.Socket.connect(Socket.java:589)\r\n\tat org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)\r\n\t... 73 more\r\n",
-  "status": "failed"
+  "duration": 68100,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 1018648709,
-  "error_message": "org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:144)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.\u003cinit\u003e(DefaultGenericMobileDriver.java:39)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:69)\r\n\tat io.appium.java_client.AppiumDriver.\u003cinit\u003e(AppiumDriver.java:78)\r\n\tat io.appium.java_client.android.AndroidDriver.\u003cinit\u003e(AndroidDriver.java:67)\r\n\tat Test.Automation.Utils.DriverFactory.createAndroidDriverInstance(DriverFactory.java:184)\r\n\tat Test.Automation.Utils.DriverFactory.initialize(DriverFactory.java:53)\r\n\tat Test.Automation.Utils.DriverFactory.\u003cinit\u003e(DriverFactory.java:34)\r\n\tat Test.Automation.Stepdefinitions.Hooks.\u003cinit\u003e(Hooks.java:28)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)\r\n\tat org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)\r\n\tat org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)\r\n\tat org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)\r\n\tat org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)\r\n\tat org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)\r\n\tat org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)\r\n\tat org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)\r\n\tat org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)\r\n\tat cucumber.runtime.java.picocontainer.PicoFactory.getInstance(PicoFactory.java:40)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat TestSuite.ExtendedCucumberRunner.run(ExtendedCucumberRunner.java:50)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\r\nCaused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027KHILT-2391\u0027, ip: \u0027169.254.154.246\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: AndroidDriver\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)\r\n\t... 59 more\r\nCaused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)\r\n\tat org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)\r\n\tat org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)\r\n\tat org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)\r\n\tat org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)\r\n\tat org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)\r\n\tat org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)\r\n\tat org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)\r\n\tat org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)\r\n\t... 60 more\r\nCaused by: java.net.ConnectException: Connection refused: connect\r\n\tat java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\r\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\r\n\tat java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)\r\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\r\n\tat java.net.Socket.connect(Socket.java:589)\r\n\tat org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)\r\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)\r\n\t... 73 more\r\n",
-  "status": "failed"
+  "duration": 28400,
+  "status": "passed"
 });
 });

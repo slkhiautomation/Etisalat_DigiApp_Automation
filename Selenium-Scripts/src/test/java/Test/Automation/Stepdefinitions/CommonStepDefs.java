@@ -10,6 +10,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static Test.Automation.Utils.ExcelFileManager.readFromCell;
 
@@ -22,13 +26,24 @@ public class CommonStepDefs extends DriverFactory {
     public static int AR_count = 1;
     public static int DES_count = 1;
 
+
     public CommonStepDefs() throws Exception {
         commonPage = new CommonPage(driver);
     }
+    @Given("^User has opened an application$")
+    public void user_has_opened_an_application() throws Throwable {
 
+        try {
+            String URL = new PropertyReader().readProperty("AndroidappURL");
+//            driver.get(URL);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4724/wd/hub"), cap);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+    }
     @When("^user enter text \"([^\"]*)\" in \"([^\"]*)\" on \"([^\"]*)\"$")
     public void user_enter_text_in_on(String textKey,String keyName, String sheetName) throws Throwable {
-
         String text = readFromCell(DatafileName,sheetName,1,textKey);
         commonPage.enterText(sheetName,keyName,text);
         Reporter.addStepLog("Test data used" +text);
@@ -38,9 +53,19 @@ public class CommonStepDefs extends DriverFactory {
     @When("^user click on \"([^\"]*)\" button on \"([^\"]*)\"$")
     public void user_click_on_button_on(String keyName, String sheetName) throws Throwable {
         commonPage.Clickelemet(sheetName,keyName);
+//        commonPage.Clickelemet1(sheetName,keyName);
         Reporter.addStepLog("Click on "+keyName);
         UtilityMethods.TakeSnapShot();
     }
+
+    @When("user tap on \"([^\"]*)\" on \"([^\"]*)\"")
+    public void user_tap_on(String keyName, String sheetName) throws Throwable {
+        commonPage.tapelement(sheetName,keyName);
+//        commonPage.Clickelemet1(sheetName,keyName);
+        Reporter.addStepLog("Click on "+keyName);
+        UtilityMethods.TakeSnapShot();
+    }
+
 
     @When("^user click on \"([^\"]*)\" on \"([^\"]*)\"$")
     public void user_click_on(String keyName, String sheetName) throws Throwable {
@@ -112,7 +137,7 @@ public class CommonStepDefs extends DriverFactory {
 
     @And("user wait for 5 second")
     public void user_wait_for_two_second() throws InterruptedException {
-        Thread.sleep(30000);
+        Thread.sleep(5000);
     }
 
 }

@@ -4,9 +4,11 @@ import Test.Automation.Utils.DriverFactory;
 import Test.Automation.Utils.PropertyReader;
 import Test.Automation.Utils.UtilityMethods;
 import com.cucumber.listener.Reporter;
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Assert;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -24,6 +26,7 @@ public class CommonPage extends DriverFactory {
 
     @FindBy(how= How.XPATH,using=".//*[@id='locations']")
     public static WebElement Location;
+    public static String elementText = "";
 
     public static String fileName =(new PropertyReader().readProperty("excelFileName"));
     public static String ConfigfileName;
@@ -45,6 +48,7 @@ public class CommonPage extends DriverFactory {
 //        UtilityMethods.waitForPageLoad();
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),500);
         UtilityMethods.waitForVisibility(element);
+        //UtilityMethods.wait3Seconds();
         element.clear();
         element.sendKeys(text);
         System.out.println("Text enetered in element "+rowMatch+" "+ text);
@@ -55,12 +59,13 @@ public class CommonPage extends DriverFactory {
 //        UtilityMethods.waitForPageLoad();
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),500);
         System.out.println("Element found "+element.getText());
-//        UtilityMethods.waitForVisibility(element);
-//        UtilityMethods.scrollToWebElement(element);
         try{
 //            UtilityMethods.waitForPageLoadAndPageReady();
 //            UtilityMethods.waitForPageLoad();
+                //UtilityMethods.wait3Seconds();
             element.click();
+          //  element1.click();
+            //Thread.sleep(500);
             System.out.println("Clicked on Element "+rowMatch);
 
         }catch (Exception ex){
@@ -71,6 +76,20 @@ public class CommonPage extends DriverFactory {
             System.out.println("Clicked on Element by Action "+rowMatch);
         }
     }
+    public void tapelement(String Sheet, String rowMatch) throws IOException, InterruptedException {
+        WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),500);
+        System.out.println("Tap Element found "+element.getText());
+        Point p=element.getLocation();
+        TouchAction action = new TouchAction((MobileDriver) driver);
+        action.tap(p.x,p.y).perform();
+        //UtilityMethods.waitForVisibility120(element);
+//        TouchActions action = new TouchActions(driver)
+//                .singleTap(element);
+//        UtilityMethods.wait3Seconds();
+        //action.singleTap(element);
+//        action.perform();
+    }
+
 
     public void selectDDValue(String Sheet, String rowMatch, String text) throws IOException {
         UtilityMethods.waitForPageLoadAndPageReady();
@@ -82,7 +101,8 @@ public class CommonPage extends DriverFactory {
 
     public void assertonPage(String Sheet, String rowMatch) throws IOException, InterruptedException {
 //        UtilityMethods.waitForPageLoadAndPageReady();
-        WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),110);
+
+        WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),200);
 //        UtilityMethods.waitForVisibility(element);
         System.out.println("Element found and Value is "+element.getText());
         String result = readFromCell(fileName,Sheet,1,rowMatch);

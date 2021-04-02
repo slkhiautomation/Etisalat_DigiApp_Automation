@@ -34,8 +34,8 @@ public class Hooks extends DriverFactory {
     @Before
     public void beforeScenario(Scenario scenario) {
 
-        //Reporter.loadXMLConfig(new File("src\\extent-config.xml"));
-       // Reporter.loadXMLConfig(new File("Selenium-Scripts/src/extent-config.xml"));
+        Reporter.loadXMLConfig(new File("src\\extent-config.xml"));
+        Reporter.loadXMLConfig(new File("Selenium-Scripts/src/extent-config.xml"));
         Reporter.assignAuthor(System.getProperty("user.name"));
         Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
         Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
