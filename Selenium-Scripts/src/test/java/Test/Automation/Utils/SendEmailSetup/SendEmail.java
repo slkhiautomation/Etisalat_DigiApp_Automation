@@ -46,8 +46,6 @@ public class SendEmail {
 		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailSendTo, false));
 		message.addRecipients(Message.RecipientType.CC, InternetAddress.parse(emailSendCC));
 		MimeBodyPart attach = new MimeBodyPart();
-//		new ZipUtils();
-//		String extrpt = "target\\cucumber-reports\\report.html";
 		appZip.zipIt(OUTPUT_ZIP_FILE);
 		String extrpt = OUTPUT_ZIP_FILE;
 		DataSource source = new FileDataSource(extrpt);

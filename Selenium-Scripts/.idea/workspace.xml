@@ -16,7 +16,14 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/DigitalApp_Android" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3b31e0e-ca22-4731-8b78-29ea75ae7292" name="Default Changelist" comment="">
@@ -255,7 +262,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/DigitalApp_Android" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -263,6 +282,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-915" y="360" width="632" height="479" key="#Notifications" timestamp="1617378923974">
+      <screen x="-1600" y="68" width="1600" height="860" />
+    </state>
+    <state x="-915" y="360" width="632" height="479" key="#Notifications/0.0.1366.728/-1600.68.1600.860@-1600.68.1600.860" timestamp="1617378923974" />
     <state x="286" y="75" width="794" height="653" key="#RunAll_Sanity" timestamp="1615387622487">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
