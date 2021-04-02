@@ -158,7 +158,15 @@ public class CommonPage extends DriverFactory {
         WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName,Sheet,1,rowMatch),110);
         UtilityMethods.waitForVisibility(element);
         String attr_value = element.getAttribute(attribute);
-        if(attr_value != null){
+        if(attribute.equals("!Displayed")){
+            if(element.isDisplayed() == false){
+                Assert.assertTrue(true);
+                System.out.println(rowMatch+"is "+attribute);
+            }else{
+                Assert.fail();
+                System.out.println(rowMatch+"is not "+attribute);
+            }
+        }else if(attr_value != null){
             Assert.assertTrue(true);
             System.out.println(attribute+" available");
         }else{
