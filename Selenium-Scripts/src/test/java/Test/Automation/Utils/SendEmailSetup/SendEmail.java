@@ -18,12 +18,14 @@ import java.util.Properties;
 
 public class SendEmail {
 
+	public static final String OUTPUT_ZIP_FILE = ZipUtils.OUTPUT_ZIP_FILE;
+
 	public static void main(String[] args) throws IOException, MessagingException {
 		sendEmailBody(TestData.Email.EMAIL_RESULT_SUBJECT, "cucumber-json-report-Sanity");
 	}
 
 	public static void sendEmailBody(String subject, String jsonFileName) throws MessagingException, IOException {
-
+		ZipUtils appZip = new ZipUtils();
 		PropertyReader propertyReader = new PropertyReader();
 		String emailSendFrom = propertyReader.readPropertyConfigEmail(TestData.Email.EMAIL_FROM);
 		String emailSendTo = propertyReader.readPropertyConfigEmail(TestData.Email.EMAIL_TO);
@@ -46,7 +48,8 @@ public class SendEmail {
 		MimeBodyPart attach = new MimeBodyPart();
 //		new ZipUtils();
 //		String extrpt = "target\\cucumber-reports\\report.html";
-		String extrpt = ZipUtils.OUTPUT_ZIP_FILE;
+		appZip.zipIt(OUTPUT_ZIP_FILE);
+		String extrpt = OUTPUT_ZIP_FILE;
 		DataSource source = new FileDataSource(extrpt);
 		attach.setDataHandler(new DataHandler(source));
 		attach.setFileName(extrpt);
