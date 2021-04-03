@@ -13,5 +13,14 @@ Feature: Login into Home Move Application and Submit a Home Move Request
 #  Validate addon is removed at end of the month.
 #  Validate once unsubscribed, the addon should not appear under current addons.
 #  Validate as per unsubscription the allowance is updated.
-    And user click on "userPlan" button on "PlansAndAddonsPage"
+    And user click on "userPlan" button on "Homepage"
     And user click on "manageTab" button on "detailsPage"
+    And user scroll till text "Nickname"
+    And user click on "MyAddOnSubscription" button on "PlansAndAddonsPage"
+#    And user select "VoiceAddOn" from "MyAddOnSubscription" on "PlansAndAddonsPage"
+    And user tap on "VoiceAddOn" on "PlansAndAddonsPage"
+    Then Assert that "ViewDetails" appear on "PlansAndAddonsPage"
+    Then Assert that "CancelSubscription" appear on "PlansAndAddonsPage"
+    And user tap on "Unsubscription" on "PlansAndAddonsPage"
+#    And user tap on "YesPlease" on "PlansAndAddonsPage"
+    Then Assert that "addon" is "!Displayed" on "PlansAndAddonsPage"
