@@ -172,7 +172,7 @@ public class UtilityMethods extends DriverFactory {
         }
 
     public static void TakeSnapShot() throws Throwable{
-        UtilityMethods.wait3Seconds();
+        UtilityMethods.wait6Seconds();
         String screenshotName = "";
         //DriverFactory obj = new DriverFactory.getDriver();
         DateFormat dateFormat;
@@ -186,8 +186,6 @@ public class UtilityMethods extends DriverFactory {
 
 
     public static WebElement getElementWithTextProduct() throws IOException{
-
-
                 String Filename = ExcelFileManager.readCellvalue("Testdata", "XMLtoExcel", 1, 1);
                 String SheetName = ExcelFileManager.readCellvalue("Testdata", "XMLtoExcel", 1, 4);
                 String text = ExcelFileManager.readFromCell(Filename,SheetName,1,"products");

@@ -20,9 +20,22 @@ import java.sql.SQLException;
         //Execution//sourcePath
        // tags = {"@POST"},
 
+
+        //tags = {"@TC_180,@TC_181,@TC_182,@TC_193,@TC_227"},
+
+
+        features = {"src/test/resources/Etisalat_DigitalApp/IOS/199854_Collection_Notification.feature"},
+    //    features = {"src/test/resources/Etisalat_DigitalApp/IOS/201904-Post_Enhancement_CR1.feature"},
+
+      // features = {"src/test/resources/Etisalat_DigitalApp/IOS/202449-Recharge_History_CR2.feature"},
+     //   features = {"src/test/resources/Etisalat_DigitalApp/IOS/177605-Home_Move.feature"},
+       //  features = {"src/test/resources/Etisalat_DigitalApp/IOS/PlansAndAddOnsCR.feature"},
+       // features = {"src/test/resources/Etisalat_DigitalApp/IOS/RechargeHistory.feature"},
      //   features = {"src/test/resources/Etisalat_DigitalApp/IOS/UDMigrationPPM.feature"},
        // features = {"src/test/resources/Etisalat_DigitalApp/IOS/PlansAndAddOnsCR.feature"},
-        features = {"src/test/resources/Etisalat_DigitalApp/IOS/MoveHome.feature"},
+    //    features = {"src/test/resources/Etisalat_DigitalApp/IOS/Move(//XCUIElementTypeStaticText[@name="Lato-Regular"])[2]Home.feature"},
+
+
 //        features = {"src/test/resources/features/Login.feature"},
         plugin = {"pretty", "html:target/cucumber-html-report-Sanity",
                 "json:target/cucumber-json-report-Sanity.json",

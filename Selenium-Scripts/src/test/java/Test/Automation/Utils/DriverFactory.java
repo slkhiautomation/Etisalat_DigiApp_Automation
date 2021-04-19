@@ -167,6 +167,12 @@ public class DriverFactory {
 			cap.setCapability("xcodeSigningId", new PropertyReader().readProperty("xcodeSigningId"));
 			cap.setCapability("noReset", true);
 			cap.setCapability("clearSystemFiles", true);
+			cap.setCapability("ignoreUnimportantViews", true);
+			//cap.setCapability("newCommandTimeout", 30000);
+			cap.setCapability("wdaLocalPort", 8080);
+
+
+		
 
 
 			if (deviceName.equalsIgnoreCase(new PropertyReader().readProperty("DEVICE_NAME"))) {

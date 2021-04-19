@@ -5,6 +5,7 @@ import Test.Automation.Utils.PropertyReader;
 import Test.Automation.Utils.UtilityMethods;
 import com.cucumber.listener.Reporter;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -66,6 +67,30 @@ public class CommonPage extends DriverFactory {
         System.out.println("Element found " + element.getText());
         //    UtilityMethods.waitForVisibility(element);
         //    UtilityMethods.scrollToWebElement(element);
+        try {
+            //UtilityMethods.waitForPageLoadAndPageReady();
+            //UtilityMethods.waitForPageLoad();
+            element.click();
+            System.out.println("Clicked on Element " + rowMatch);
+
+        } catch (Exception ex) {
+            //UtilityMethods.waitForPageLoadAndPageReady();
+            //UtilityMethods.waitForPageLoad();
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).click().perform();
+            System.out.println("Clicked on Element by Action " + rowMatch);
+        }
+    }
+
+
+    public void tapelement(String Sheet, String rowMatch) throws IOException, InterruptedException {
+        WebElement element = UtilityMethods.getElementByXpath(readFromCell(ConfigfileName, Sheet, 1, rowMatch), 500);
+        System.out.println("Tap Element found " + element.getText());
+        System.out.println("Hello, World!");
+        Point p = element.getLocation();
+        TouchAction action = new TouchAction((MobileDriver) driver);
+        action.tap(p.x, p.y).perform();
+
         try {
             //UtilityMethods.waitForPageLoadAndPageReady();
             //UtilityMethods.waitForPageLoad();
@@ -245,7 +270,7 @@ public class CommonPage extends DriverFactory {
     public void scrollDown() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         HashMap<String, String> scrollObject = new HashMap<String, String>();
-        UtilityMethods.wait6Seconds();
+        UtilityMethods.wait3Seconds();
         scrollObject.put("direction", "down");
         js.executeScript("mobile: scroll", scrollObject);
     }
@@ -269,6 +294,9 @@ public class CommonPage extends DriverFactory {
 
 
     }
+
+
+
 
 }
 

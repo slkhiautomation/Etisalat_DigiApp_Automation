@@ -53,6 +53,7 @@ public class StartingSteps extends DriverFactory {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        UtilityMethods.TakeSnapShot();
         /*try {
             driver = new AndroidDriver(new URL(new PropertyReader().readProperty("AndroidappURL")), cap);
         } catch (MalformedURLException e) {

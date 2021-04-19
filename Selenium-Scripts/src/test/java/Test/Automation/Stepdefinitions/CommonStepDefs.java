@@ -69,6 +69,13 @@ public class CommonStepDefs extends DriverFactory {
         Reporter.addStepLog("Action Performed on " + sheetName);
         UtilityMethods.TakeSnapShot();
     }
+    @When("^user select on \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void user_select_on(String keyName, String sheetName) throws Throwable {
+        commonPage.Clickelemet(sheetName,keyName);
+        Reporter.addStepLog("Click on "+keyName);
+        UtilityMethods.TakeSnapShot();
+    }
+
 
     @When("^user click on \"([^\"]*)\" on \"([^\"]*)\"$")
     public void user_click_on(String keyName, String sheetName) throws Throwable {
@@ -90,6 +97,15 @@ public class CommonStepDefs extends DriverFactory {
         commonPage.Scrollelemet(sheetName, keyName);
         Reporter.addStepLog("Click on " + keyName);
         Reporter.addStepLog("Action Performed on " + sheetName);
+        UtilityMethods.TakeSnapShot();
+    }
+
+
+    @When("user tap on \"([^\"]*)\" on \"([^\"]*)\"")
+    public void user_tap_on(String keyName, String sheetName) throws Throwable {
+        commonPage.tapelement(sheetName,keyName);
+//        commonPage.Clickelemet1(sheetName,keyName);
+        Reporter.addStepLog("Click on "+keyName);
         UtilityMethods.TakeSnapShot();
     }
 
