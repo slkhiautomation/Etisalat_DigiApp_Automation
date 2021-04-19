@@ -11,14 +11,10 @@ Feature: Collection Notification
   @TC_08
   Scenario:TC_08_Customer logs into My Etisalat mobile app and verifies the payment notification on the home screen
     Customer has a new bill generated and payment date due.
-    Then Assert that "ViewBill" appear on "CollectionNotificationPage"
-    Then Assert that "InsideMessage" appear on "CollectionNotificationPage"
-    And user click on "ViewBill" button on "CollectionNotificationPage"
-    Then Assert that "PayNow" appear on "CollectionNotificationPage"
-    And user click on "PayNow" button on "CollectionNotificationPage"
-    Then Assert that "PayBILLS" appear on "CollectionNotificationPage"
-    And user click on "Next" button on "PostEnhancementPage"
-
+    And user click on "NotificationIcon" button on "CollectionNotificationPage"
+    And user get the "Transaction_reference_number" from "CollectionNotificationPage"
+    And user click on "NotificationTab" button on "CollectionNotificationPage"
+    Then Assert that "Transaction_reference_number" is same as "Transaction_Reference_Number" on "CollectionNotificationPage"
 
 
 
